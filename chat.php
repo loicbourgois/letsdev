@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8" />
 		<link type="text/css" rel="stylesheet" href="./css/main.css" />
-		<link type="text/css" rel="stylesheet" href="./css/home.css" />
-		<script type="text/javascript" src="./js/home.js"></script>
-		<title>Gestion d'équipe - Accueil</title>
+		<link type="text/css" rel="stylesheet" href="./css/chat.css" />
+		<script type="text/javascript" src="./js/chat.js"></script>
+		<title>Gestion d'équipe - Chat</title>
 	</head>
 	<body>
 		<header>
@@ -19,5 +19,5 @@
 </html>
 
 <?php
-	echo("Hey");
+	//echo("Hey");
 ?>
