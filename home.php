@@ -14,5 +14,5 @@
 </html>
 
 <?php
-	//echo("Hey");
+	echo("Hey");
 ?>
