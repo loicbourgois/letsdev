@@ -1,0 +1,84 @@
+<script src="libs/multichat.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(function() {
+	bloc("connexion");
+
+	$('body').on('click', '#connexion', function () {
+		$.ajax({ url: 'data.php',
+			data: {action: 'connexion',login:$("#login").val(),passe:$("#password").val()},
+			type: 'post',
+			success: function(output) {
+				var obj = jQuery.parseJSON(output);
+				if(obj.connecte)
+				{
+					bloc("convChoice");
+				}
+			}
+		});
+	});
+	$('body').on('click', '#convIcone', function () {
+		bloc("convChoice");
+	});
+	$('body').on('click', '#selectConv', function () {
+		bloc("conv");
+	});
+	$('body').on('click', '#sendMessage', function () {
+		$.ajax({ url: 'data.php',
+			data: {action: 'setMessage',contenu:$('#message').val(),idConv:id},
+			type: 'post',
+			success: function(output) {
+			}
+		});
+	});
+});
+
+
+
+</script>
+
+
+<style>
+.title	{
+	background-color: lightgrey;
+	border: 1px solid grey;
+}
+.bloc {
+	max-width: 30%;
+	height: 35%;
+	border: 2px solid grey;
+	text-align: center;
+}
+.icone {
+	height: 5%;
+	weight: 5%;
+	margin : 2px;
+}
+input {
+	margin : 2px;
+}
+</style>
+<body>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
